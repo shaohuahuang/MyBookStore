@@ -1,24 +1,19 @@
 package com.example.bookstoreclient.controller;
 
-import java.util.Arrays;
-
+import com.example.bookstoreclient.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.bookstoreclient.model.Book; 
+import java.util.Arrays;
 
 @RestController
 public class ConsumeBookController {
-	private final String serverURL = "http://localhost:9091";
+	private final String serverURL = "http://localhost:8080/bookstoreserver-0.0.1-SNAPSHOT";
 	@Autowired
 	RestTemplate restTemplate;
 	
